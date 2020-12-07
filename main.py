@@ -73,12 +73,13 @@ if __name__=='__main__':
     if len(os.listdir())==1:
         print("Folder is empty")
         inp = input("Press any key to continue")
+        exit()
     else:
         for folders, subfolder, files in os.walk(os.getcwd()):
             for items in files:
                 filelist.append(items)
-    print(filelist)
-    makefolder(filelist)
-    organise(filelist)
-    print("Done!!!")
-    inp = input("Press any key to continue......")
+        print(filelist)
+        makefolder(filelist)
+        organise(filelist)
+        print("Done!!!")
+        inp = input("Press any key to continue......")
